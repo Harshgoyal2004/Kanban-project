@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .board {
+      display: flex;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      margin: 0 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .column-header {
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 2px solid #ddd;
+      background-color: #f0f0f0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .column-body {
+      min-height: 150px;
+      padding: 15px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #e0e0e0;
+    }
+
+    .card:focus {
+      outline: none;
+      background-color: #e0e0e0;
+    }
+
+    .card::before {
+      content: '\f05d';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      display: inline-block;
+      margin-right: 5px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <div class="column">
+      <div class="column-header">To Do</div>
+      <div class="column-body" id="todo-column">
+        <div class="card">Task 1</div>
+        <div class="card">Task 2</div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="column-header">In Progress</div>
+      <div class="column-body" id="inprogress-column">
+        <div class="card">Task 3</div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="column-header">Done</div>
+      <div class="column-body" id="done-column">
+        <div class="card">Task 4</div>
+        <div class="card">Task 5</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
